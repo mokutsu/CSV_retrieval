@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 
+  money: 
+  like: 
+  views: 
+  share: 
+
+two:
+  date: 
+  money: 
+  like: 
+  views: 
+  share: 

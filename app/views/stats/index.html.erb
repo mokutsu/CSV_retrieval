@@ -1,0 +1,16 @@
+<h1>Stat#index</h1>
+
+<% if @stats.any? %>
+  <ul>
+  <% @stats.each do |stat| %>
+    <li> <%=stat %> </li>
+  <% end %>
+<% end %>
+
+
+<h1> Import a new CSV File </h1>
+  <%= form_tag import_stats_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
+</div>
