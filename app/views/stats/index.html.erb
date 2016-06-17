@@ -1,11 +1,6 @@
 <h1>Stat#index</h1>
 
-<% if @stats.any? %>
-  <ul>
-  <% @stats.each do |stat| %>
-    <li> <%=stat %> </li>
-  <% end %>
-<% end %>
+
 
 
 <h1> Import a new CSV File </h1>
@@ -14,3 +9,10 @@
     <%= submit_tag "Import CSV" %>
   <% end %>
 </div>
+
+<h1> Retrieve subset of CSV </h1>
+<%= form_tag(:stats, method: "get") do %>
+  <%=select_tag :start_id, options_from_collection_for_select(Stat.all, :id, :date)%>
+  <%=select_tag :end_id, options_from_collection_for_select(Stat.all, :id, :date)%>
+  <%= submit_tag('search') %>
+<% end %>

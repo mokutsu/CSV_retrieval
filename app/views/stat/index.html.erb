@@ -1,0 +1,22 @@
+<h1>Stat#index</h1>
+
+<% if @stats != nil %>
+  <ul>
+  <% @stats.each do |stat| %>
+    <li> stat id<%= stat.id %> </li>
+    <li> date <%=stat.date %> </li>
+    <li> money <%=stat.money %> </li>
+    <li> like <%=stat.like %> </li>
+    <li> views <%=stat.views %> </li>
+    <li> share <%=stat.share %> </li>
+  <% end %>
+  </ul>
+<% end %>
+
+
+<h1> Import a new CSV File </h1>
+  <%= form_tag import_stats_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
+</div>
