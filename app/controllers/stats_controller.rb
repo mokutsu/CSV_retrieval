@@ -6,9 +6,9 @@ class StatsController < ApplicationController
 
     if params[:start_id]
       params = stats_params
-      min_id = [params[:start_id], params[:end_id]].min
-      max_id = [params[:start_id], params[:end_id]].max
-
+      min_id = [params[:start_id].to_i, params[:end_id].to_i].min
+      max_id = [params[:start_id].to_i, params[:end_id].to_i].max
+      binding.pry
       @stats = Stat.where(:id => min_id..max_id)
 
       respond_to do |format|
