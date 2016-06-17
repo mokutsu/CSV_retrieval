@@ -10,4 +10,4 @@ The successfulness of this app as an API-only product can be tested using a tool
 This web app uses the Ruby on Rails MVC Framework (Rails 4.0, Ruby 2.3.0), and runs on the Puma Webserver. The development/test databases are SQLIte3 and the production database is Postgres. Run rake db:migrate to set up database, and rails s to serve up a local version. See gemfile for all dependencies. 
 
 # Deployment instructions
-This web application has been deployed to https://obscure-depths-90672.herokuapp.com. 
+This web application has been deployed to https://obscure-depths-90672.herokuapp.com. The requested CSV file (chart.csv) has already been uploaded in the production environment and should not be uploaded again. 
