@@ -12,7 +12,6 @@ class Stat < ActiveRecord::Base
         stat_int[key] = value.to_i
       end
       stat.merge(stat_date).merge(stat_int)
-      binding.pry
       stat_new = Stat.create(stat)
     end
   end
