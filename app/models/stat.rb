@@ -7,7 +7,6 @@ class Stat < ActiveRecord::Base
       stat = row.to_hash.map{|k, v| {k.to_sym => v} }
       stat = stat.inject{|mem, newhash| mem.merge(newhash)}
       stat_date = stat.slice(:date)
-            binding.pry
       stat_int = stat.slice(:money, :like, :views, :share)
       stat_int.each do |key, value|
         stat_int[key] = value.to_i

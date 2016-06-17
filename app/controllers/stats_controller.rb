@@ -12,7 +12,6 @@ class StatsController < ApplicationController
       @stats = Stat.where(:id => min_id..max_id)
 
       respond_to do |format|
-        binding.pry
         format.any { render json: @stats.to_json}
       end
     end
